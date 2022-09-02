@@ -1,0 +1,44 @@
+// .principe {
+//   @include flex();
+// }
+// .principe__item {
+//   text-align: left;
+//   width: 270px;
+
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+//   &::before {
+//     content: "";
+//     display: block;
+//     height: 120px;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-color: var(--secondary-background);
+//     margin-bottom: 30px;
+//   }
+// }
+
+// .principe__item_icon-satellite::before {
+//   background-image: url(../images/forsprite/antenna.svg);
+// }
+// .principe__item_icon-clock::before {
+//   background-image: url(../images/forsprite/clock.svg);
+// }
+// .principe__item_icon-diagram::before {
+//   background-image: url(../images/forsprite/diagram.svg);
+// }
+// .principe__item_icon-astronaut::before {
+//   background-image: url(../images/forsprite/astronaut.svg);
+// }
+
+// .principe__title {
+//   margin-bottom: 10px;
+//   @include font(700, 14px, 16px);
+//   text-transform: uppercase;
+//   color: var(--primery-color-text-white-them);
+// }
+// .principe__description {
+//   line-height: 1.71;
+//   color: var(--secondary-color-text-white-them);
+// }
