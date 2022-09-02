@@ -1,0 +1,220 @@
+.contacts-section {
+  padding-bottom: 40px;
+  background-color: var(--background-color);
+}
+
+.container-contacts {
+  padding: 0 20px;
+}
+
+.contacts-card {
+  margin-bottom: 32px;
+}
+
+.contacts-card__item {
+  padding-bottom: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--main-light-text-color);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts-card__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-representation {
+  display: inline-block;
+  @include font(500, 12px, 22px);
+  background-color: var(--current-color);
+  color: var(--main-light-text-color);
+  padding-left: 23px;
+  padding-right: 23px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.contacts-list__item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.contacts-place {
+  @include font(500, 12px, 22px);
+  letter-spacing: 0.04em;
+  color: var(--main-dark-color);
+  margin-bottom: 8px;
+}
+
+.contacts-link {
+  @include font(500, 12px, 22px);
+  letter-spacing: 0.04em;
+  color: var(--background-product-color3);
+}
+
+.contacts-working__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.contacts-working__days {
+  @include font(500, 12px, 22px);
+  letter-spacing: 0.04em;
+  color: var(--main-dark-color);
+}
+
+.contacts-working__hours {
+  @include font(500, 12px, 22px);
+  letter-spacing: 0.04em;
+  color: #ababab;
+}
+
+.contacts-communication__link {
+  @include font(500, 12px, 18px);
+  color: var(--background-product-color3);
+}
+
+.contacts-btn {
+  display: block;
+  background-color: transparent;
+  border-radius: 10px;
+  width: 161px;
+  height: 49px;
+  // padding: 13px 15px;
+  margin: 0 auto;
+}
+
+.contacts-btn__location {
+  @include font(500, 16px, 20px);
+  background-color: var(--current-color);
+  border: none;
+  margin-bottom: 8px;
+
+  &:hover,
+  &focus {
+    background-color: #0a8817;
+  }
+}
+
+.contacts-btn__franchise {
+  @include font(700, 16px, 20px);
+  color: var(--main-light-text-color);
+  border: 2px solid #f8d24e;
+  // padding-left: 31px;
+  // padding-right: 48px;
+
+  &:hover,
+  &focus {
+    border: 2px solid #0a8817;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container-contacts {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-contacts {
+    width: 768px;
+    padding: 0 32px;
+  }
+
+  .contacts-card {
+    display: flex;
+    gap: 16px;
+  }
+
+  .contacts-card__item {
+    max-width: 224px;
+  }
+
+  .contacts-card__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .contacts-representation {
+    @include font(500, 16px, 30px);
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contacts-place {
+    @include font(500, 14px, 26px);
+  }
+
+  .contacts-link {
+    @include font(500, 14px, 26px);
+  }
+
+  .contacts-working__days,
+  .contacts-working__hours,
+  .contacts-communication__link {
+    @include font(500, 14px, 26px);
+    letter-spacing: normal;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .contacts-btn {
+    @include font(600, 14px, 18px);
+    margin: 0;
+  }
+
+  .contacts-btn__location {
+    width: 192px;
+    height: 42px;
+  }
+
+  .contacts-btn__franchise {
+    width: 158px;
+    height: 42px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-contacts {
+    width: 1200px;
+    padding: 0 16px;
+  }
+
+  .contacts-card {
+    gap: 32px;
+  }
+
+  .contacts-card__item {
+    max-width: 368px;
+  }
+
+  .contacts-representation {
+    @include font(500, 16px, 30px);
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .contacts-place {
+    @include font(500, 16px, 30px);
+    letter-spacing: 0.04em;
+  }
+
+  .contacts-link {
+    @include font(500, 16px, 30px);
+    letter-spacing: 0.04em;
+  }
+
+  .contacts-working__days,
+  .contacts-working__hours,
+  .contacts-communication__link {
+    @include font(500, 16px, 30px);
+    letter-spacing: 0.04em;
+  }
+}
