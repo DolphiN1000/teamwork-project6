@@ -124,12 +124,32 @@
       </li>
     </ul>
     <div class="btn-wrapper">
-      <button type="button" class="contacts-btn contacts-btn__location">
+      <button type="button" class="contacts-btn contacts-btn__location" data-modal-open>
         Our Locations
+        <svg class="contacts-btn__icon" width="15" height="25">
+          <use href="./images/contacts/icon-contacts.svg#arrow-right"></use>
+        </svg>
       </button>
       <button type="button" class="contacts-btn contacts-btn__franchise">
         Franchise
+        <svg class="contacts-btn__icon" width="15" height=25">
+          <use href="./images/contacts/icon-contacts.svg#arrow-right"></use>
+        </svg>
       </button>
+    </div>
+  </div>
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-location">
+      <button class="modal-location-button" data-modal-close>
+          <svg class="modal-location-button__icon" width="16" height="16">
+            <use href="./images/contacts/icon-contacts.svg#close-line"></use>
+          </svg>
+        </button>
+        <p class="modal-location-text">
+          Our Locations
+        </p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d588199.1243167166!2d34.90240191614503!3d49.37643100184151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2z0J_QvtC70YLQsNCy0LAsINCf0L7Qu9GC0LDQstGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAzNjAwMA!5e0!3m2!1suk!2sua!4v1662140897497!5m2!1suk!2sua" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
