@@ -1,0 +1,20 @@
+.gallery_image {
+    width: 100%;
+    
+}
+
+@media screen and (min-width:480px) { 
+        .gallery_image {
+            width: 279px;
+        }
+    }
+@media screen and (min-width:768px) { 
+    .gallery_image {
+        width: 704px;
+    }
+}
+@media screen and (min-width:1200px) { 
+    .gallery_image {
+        width: 1013px;
+    }
+}
