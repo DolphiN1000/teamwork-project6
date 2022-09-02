@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper2', {
   // Optional parameters
   direction: 'horizontal',
   //direction: 'vertical',
@@ -12,12 +12,12 @@ const swiper = new Swiper('.swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next2',
+    prevEl: '.swiper-button-prev2',
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: '.swiper-scrollbar2',
   },
 });
