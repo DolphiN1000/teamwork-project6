@@ -1,0 +1,203 @@
+.container {
+    padding: 0 15px;
+  }
+  
+  .customer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .customer-container {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  
+  .customer-photo {
+    margin-bottom: 30px;
+  }
+  
+  .customer-review-desc {
+    margin-bottom: 32px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: #84a178;
+    color: #fcfcfc;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.85;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  .customer-review-author {
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2.58;
+    text-align: center;
+  }
+  .customer-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  // swiper styles
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
+  .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+  .swiper-android .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+  .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+  }
+  .swiper-pagination {
+    text-align: center;
+    transition: 0.3s opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+  }
+  .swiper-pagination-bullet {
+    margin-top: 20px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #d9d9d9;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  }
+  button.swiper-pagination-bullet {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet:only-child {
+    display: none !important;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #84a178;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 18px;
+  }
+  .swiper-pagination-lock {
+    display: none;
+  }
+  
+  @media screen and (min-resolution: 1dppx),
+    (min-resolution: 96dpi),
+    (min-device-pixel-ratio: 1) {
+    .customer-container {
+      background-image: url('../images/ice-cream-mobile.jpg');
+    }
+  }
+  
+  @media screen and (min-resolution: 2dppx),
+    (min-resolution: 192dpi),
+    (min-device-pixel-ratio: 2) {
+    .customer-container {
+      background-image: url('../images/ice-cream-mobile@2x.jpg');
+    }
+  }
+  
+  @media screen and (min-resolution: 1dppx) and (min-width: 768px),
+    screen and (min-resolution: 95dpi) and (min-width: 768px),
+    screen and (min-device-pixel-ratio: 1) and (min-width: 768px) {
+    .customer-container {
+      background-image: url('../images/ice-cream-tablet.jpg');
+    }
+  }
+  
+  @media screen and (min-resolution: 2dppx) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .customer-container {
+      background-image: url('../images/ice-cream-tablet@2x.jpg');
+    }
+  }
+  
+  @media screen and (min-resolution: 1dppx) and (min-width: 1200px),
+    screen and (min-resolution: 95dpi) and (min-width: 1200px),
+    screen and (min-device-pixel-ratio: 1) and (min-width: 1200px) {
+    .customer-container {
+      background-image: l url('../images/ice-cream-desktop.jpg');
+    }
+  }
+  
+  @media screen and (min-resolution: 2dppx) and (min-width: 1200px),
+    screen and (min-resolution: 192dpi) and (min-width: 1200px),
+    screen and (min-device-pixel-ratio: 2) and (min-width: 1200px) {
+    .customer-container {
+      background-image: url('../images/ice-cream-desktop@2x.jpg');
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .customer-review-desc {
+      padding: 28px 80px;
+      border-radius: 24px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.85;
+    }
+    .customer-review-author {
+      margin-bottom: 32px;
+      font-family: 'Montserrat';
+      font-size: 16px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .customer-review-desc {
+      padding: 38px 74px;
+      font-size: 16px;
+    }
+  }
+  
