@@ -1,0 +1,64 @@
+<header class="hero-header">
+    <div class="container hero-header">
+        <a href="./index.html" class="logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a>
+        <nav class="nav">
+            <ul class="menu-list">
+                <li class="menu-list__item"><a href="#home" class="menu-list__link">Home</a> </li>
+                <li class="menu-list__item"><a href="#about-us" class="menu-list__link">About us</a> </li>
+                <li class="menu-list__item"><a href="#how-its-made" class="menu-list__link">How it’s made?</a> </li>
+                <li class="menu-list__item"><a href="#our-products" class="menu-list__link">Our products</a> </li>
+                <li class="menu-list__item"><a href="#contact" class="menu-list__link">Contact</a> </li>
+            </ul>
+        </nav>
+        <button type="button" class="mobile-menu-open" data-menu-open>
+            <svg width="24" height="16" aria-label="Перемикач мобільного меню">
+                <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
+            </svg>
+        </button>
+        <button class="button btn-primary btn-buy-now" type="button" data-modal-open>
+            Buy now >
+        </button>
+        <h1 class="key-phrase">ice cream<br> made with<br> <span>passion</span></h1>
+        <div class="hero-link">
+            <a href="#products" class="hero-link__products">Products</a>
+            <a href="#how-its-made" class="hero-link__how-its-made">How it's made?</a>
+        </div>
+        <P class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</P>
+        <svg class="hero-arrow" width="40" height="20">
+            <use href="./images/symbol-defs.svg#hero-arrow"></use>
+        </svg>
+        <div class="cafe-count">16 <span>cafes</span></div>
+        <div class="food-truck-count">23 <span>food trucs</span></div>
+        <picture>
+            <source srcset="./images/header/icecream_desktop.png 1x, ./images/header/icecream_desktop@2x.png 2x" media="(min-width: 1200px)">
+            <source srcset="./images/header/icecream_tablet.png 1x, ./images/header/icecream_tablet@2x.png 2x" media="(min-width: 768px)">
+            <source srcset="./images/header/icecream_mobile.png 1x, ./images/header/icecream_mobile@2x.png 2x" media="(min-width: 270px)">
+            <img src="./images/header/icecream_mobile.png" alt="" class="icecream__img">
+        </picture>
+        <picture>
+            <source srcset="./images/header/plate_desktop.png 1x, ./images/header/plate_desktop@2x.png 2x" media="(min-width: 1200px)">
+            <source srcset="./images/header/plate_tablet.png 1x, ./images/header/plate_tablet@2x.png 2x" media="(min-width: 768px)">
+            <img src="./images/header/plate_desktop.png" alt="" class="plate__img">
+        </picture>
+     </div>
+    <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+            <a href="./index.html" class="mobile logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a>
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu__item"><a href="#home" class="mobile-menu__link">Home</a> </li>
+                <li class="mobile-menu__item"><a href="#about-us" class="mobile-menu__link">About us</a> </li>
+                <li class="mobile-menu__item"><a href="#how-its-made" class="mobile-menu__link">How it’s made?</a> </li>
+                <li class="mobile-menu__item"><a href="#our-products" class="mobile-menu__link">Our products</a> </li>
+                <li class="mobile-menu__item"><a href="#contact" class="mobile-menu__link">Contact</a> </li>
+            </ul>
+            <button class="mobile-menu__close-btn" data-menu-close>
+                <svg class="mobile-menu__close-icon" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#btn-close"></use>
+                </svg>
+            </button>
+            <button class="button btn-primary btn-buy-now__mobile" type="button" data-modal-open>
+                Buy now   >
+            </button>            
+        </div>
+    </div>
+</header>
