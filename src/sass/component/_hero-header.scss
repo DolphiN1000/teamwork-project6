@@ -125,12 +125,12 @@
     }
 }
 
-.btn-buy-now {
+.btn-buy-now-pos {
     display: none;
     z-index: 700;
 
     @media screen and (min-width: 768px) {
-        display:block;
+        display: table-cell;
         position: absolute;
         top: 24px;
         right: 33px;
@@ -172,7 +172,7 @@
     }
 }
 
-.btn-buy-now__mobile {
+.btn-buy-now-mobile {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -277,6 +277,9 @@
     position: absolute;
     top: 239px;
 
+    display: flex;
+    align-items: baseline;
+    
     @media screen and (min-width: 768px) {
         top: 198px;
     }
@@ -308,21 +311,10 @@
     }
 }
 
-.hero-link__how-its-made {
+.how-its-made-pos {
     margin-left: 16px;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    text-decoration: underline;
-    color: #F8D24E;
 
     @media screen and (min-width: 1200px) {
-        font-family: 'Montserrat';
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 18px;
-        border-radius: 10px;
         margin-left: 32px;
     }
 }
