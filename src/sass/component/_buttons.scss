@@ -13,6 +13,7 @@
     border: 2px solid #F8D24E;
     background-color: transparent;
 
+    transition: border-color 250ms, color 250ms;
 
     @include font(600, 8px, 9.75px);
     width: max-content;
@@ -110,6 +111,8 @@
     background-color:#F8D24E ;
     border: 2px solid #F8D24E;
 
+    transition: background-color 250ms, border-color 250ms;
+
     @include font(600, 14px, 18px);
     height: 42px;
     padding: 0 34px;
@@ -193,6 +196,8 @@
     height: max-content;
         
     color:#F8D24E;
+
+    transition: color 250ms;
     
     &:hover {
         color: #0A8817;
@@ -252,3 +257,4 @@
         }
     }
 }
+
