@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper2', {
+const swiper = new Swiper('.section__galery', {
   // Optional parameters
   direction: 'horizontal',
   //direction: 'vertical',
@@ -6,8 +6,7 @@ const swiper = new Swiper('.swiper2', {
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+    el: '.swiper-pagination2',
   },
 
   // Navigation arrows
