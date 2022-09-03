@@ -59,8 +59,8 @@
 
 .menu-list__item {
     font-family: 'Montserrat';
-    @include fonts($size: 16px, $weight: 700, $lh: 20px);
     color: #FCFCFC;
+    @include font(700, 16px, 20px);
 
     &:not(:last-child) {
             margin-right: 27px;
@@ -103,18 +103,28 @@
     }
 }
 
+.logo {
+    position:absolute;
+    top: 5px;
+
+        @media screen and (min-width: 768px) {
+                top: 10px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                top: 10px;
+            }
+    
+}
+
 .logo__img {
     position: absolute;
-    top: 12px;
-    // left: 32px;
+    // top: 12px;
 
     height: 37.12px;
     width: 40px;
 
     @media screen and (min-width: 768px) {
-        top: 20px;
-        left: 35px;
-
         height: 48px;
         width: 44px;
     }
@@ -122,7 +132,16 @@
     @media screen and (min-width: 1200px) {
         top: 26px;
         left: 20px;
+        height: 59px;
+        width: 55px;
+
     }
+}
+
+.mobile-menu-logo {
+    position: absolute;
+    top:10px;
+    left:20px;
 }
 
 .btn-buy-now-pos {
@@ -130,7 +149,7 @@
     z-index: 700;
 
     @media screen and (min-width: 768px) {
-        display: block;
+        display: inline-block;
         position: absolute;
         top: 24px;
         right: 33px;
@@ -190,18 +209,17 @@
 }
 
 .mobile-menu__container {
+
     position: relative;
-    padding: 100px 22px 63px 22px;
+
+    padding: 100px 20px 63px 20px;
     height: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
 }
 
 .mobile-menu__close-btn {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 19px;
+    right: 22px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -222,7 +240,7 @@
 }
 
 .mobile-menu__link {
-    @include fonts($size: 32px, $weight: 700, $lh: 39px);
+    @include font(700, 32px, 39px);
     color: var(--secondary-dark-color);
     text-decoration: none;
 
@@ -245,7 +263,7 @@
     top: 110px;
 
     font-family: 'Seymour One';
-    @include fonts($size: 26px, $weight: 400, $lh: 33px);
+    @include font (400, 26px, 33px);
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -253,20 +271,20 @@
     color: #FFFFFF;
 
     & > span {
-        @include fonts($size: 34px, $weight: 400, $lh: 33px);
+        @include font(400, 34px, 33px);
     }
 
     @media screen and (min-width: 768px) {
-        @include fonts($size: 18px, $weight: 400, $lh: 23px);
+        @include font(400, 18px, 23px);
         &>span {
-                @include fonts($size: 16.2531px, $weight: 400, $lh: 13px);
+                @include font(400, 24px, 13px);
             }
     }
 
     @media screen and (min-width: 1200px) {
-        @include fonts($size: 38px, $weight: 400, $lh: 48px);
+        @include font(400, 38px, 48px);
         &>span {
-                @include fonts($size: 38px, $weight: 400, $lh: 48px);
+                @include font(400, 38px, 48px);
             }
     }
 
@@ -348,14 +366,12 @@
 
     @media screen and (min-width: 768px) {
         display: block;
-        left: 32px;
         top: 250px;
         width: 152px;
         height: 152px;
     }
 
     @media screen and (min-width: 1200px) {
-        left: 15px;
         top: 378px;
         width: 225px;
         height: 225px;
@@ -376,7 +392,7 @@
         left: 217px;
         width: 175px;
         height: 80px;
-        @include fonts($size: 12px, $weight: 400, $lh: 17px);
+        @include font(400, 12px, 17px);
     }
 
     @media screen and (min-width: 1200px) {
@@ -385,7 +401,7 @@
         left: 258px;
         width: 220px;
         height: 80px;
-        @include fonts($size: 14px, $weight: 400, $lh: 20px);
+        @include font(400, 14px, 20px);
     }
 }
 
@@ -424,11 +440,11 @@
 
         width: max-content;
         
-        @include fonts($size: 28px, $weight: 900, $lh: 34px);
+        @include font(900, 28px, 34px);
         color: #000000;
 
         & > span {
-            @include fonts($size: 8px, $weight: 400, $lh: 10px);
+            @include font(400, 8px, 10px);
 
             color: #FFFFFF;
             text-transform: lowercase;
@@ -440,11 +456,11 @@
         right: 15px;
         // transform: translateX(-100%);
 
-        @include fonts($size: 46px, $weight: 900, $lh: 56px);
+        @include font(900, 46px, 56px);
         color: #131313;
 
         & > span {
-            @include fonts($size: 14px, $weight: 400, $lh: 17px);
+            @include font(400, 14px, 17px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
@@ -471,12 +487,12 @@
 
         width: max-content;
 
-        @include fonts($size: 28px, $weight: 900, $lh: 34px);
+        @include font(900, 28px, 34px);
         color: #000000;
         text-align: right;
 
         &>span {
-            @include fonts($size: 8px, $weight: 400, $lh: 10px);
+            @include font(400, 8px, 10px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
@@ -489,11 +505,11 @@
 
         // transform: translateX(-100%);
 
-        @include fonts($size: 46px, $weight: 900, $lh: 56px);
+        @include font(900, 46px, 56px);
         color: #131313;
 
         &>span {
-            @include fonts($size: 14px, $weight: 400, $lh: 17px);
+            @include font(400, 14px, 17px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
