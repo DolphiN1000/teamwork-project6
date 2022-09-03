@@ -22,12 +22,12 @@
     border-radius: 8px;
    
     &:hover {
-        @include font(900, 8px, 9.75px);
+        @include font(600, 8px, 9.75px);
         border-color: #0A8817;
     }
 
     &:focus {
-        @include font(900, 8px, 9.75px);
+        @include font(600, 8px, 9.75px);
         border-color: #0A8817;
         color: #FCFCFC;;
     }
