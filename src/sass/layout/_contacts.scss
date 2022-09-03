@@ -78,17 +78,26 @@
 }
 
 .contacts-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(600, 14px, 18px);
   background-color: transparent;
   border-radius: 10px;
   width: 161px;
   height: 49px;
   // padding: 13px 15px;
   margin: 0 auto;
+  color: var(--main-dark-color);
+
+  &__icon {
+    margin-top: 2px;
+    margin-left: 6px;
+    fill: currentColor;
+  }
 }
 
 .contacts-btn__location {
-  @include font(500, 16px, 20px);
   background-color: var(--current-color);
   border: none;
   margin-bottom: 8px;
@@ -100,15 +109,19 @@
 }
 
 .contacts-btn__franchise {
-  @include font(700, 16px, 20px);
   color: var(--main-light-text-color);
   border: 2px solid #f8d24e;
+  color: #fcfcfc;
   // padding-left: 31px;
   // padding-right: 48px;
 
   &:hover,
   &focus {
     border: 2px solid #0a8817;
+  }
+
+  &__icon {
+    fill: currentColor;
   }
 }
 
@@ -166,7 +179,6 @@
   }
 
   .contacts-btn {
-    @include font(600, 14px, 18px);
     margin: 0;
   }
 
