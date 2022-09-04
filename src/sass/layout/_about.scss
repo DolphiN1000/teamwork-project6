@@ -7,10 +7,12 @@
 .about__body {
     @media screen and (min-width: 768px) {
         display: flex;
+        align-items: center;
     }
 }
 
 .about__descr {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -24,6 +26,11 @@
     @media screen and (min-width: 768px) {
         width: 330px;
         height: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 500px;
+        height: 500px;
     }
 
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
@@ -79,6 +86,11 @@
     @media screen and (min-width: 768px) {
         margin-bottom: 0;
         margin-top: 0;
+        width: 334px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 463px;
     }
 
     font-family: 'Montserrat';
@@ -92,11 +104,19 @@
     color: #FCFCFC;
 }
 
+.about__last-block {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+
 .about__button {
     max-width: 170px;
 
     @media screen and (min-width: 768px) {
         position: absolute;
-        bottom: -40px;
+        bottom: -80px;
     }
 }
