@@ -75,12 +75,9 @@
 
     transition: color var(--timing-duration) var(--timing-function);
 
-
     &:hover {
         color: #F8D24E;
     }
-
-
 }
 
 .menu-list__link {
@@ -118,9 +115,8 @@
     line-height: 0;
     padding: 0;
     line-height: 0;
-    transition-property: fill;
-    transition-duration: var(--timing-duration);
-    transition-timing-function: var(--timing-function);
+
+    transition: fill var(--timing-duration) var(--timing-function);
 
     @media screen and (min-width: 768px) {
         top: 40px;
@@ -248,9 +244,7 @@
     line-height: 0;
     z-index: 1000;
 
-    transition-property: fill;
-    transition-duration: var(--timing-duration);
-    transition-timing-function: var(--timing-function);
+    transition: fill var(--timing-duration) var(--timing-function);
 
     &:hover {
         fill: var(--accent-color);
@@ -266,7 +260,7 @@
     color: var(--secondary-dark-color);
     text-decoration: none;
 
-    transition: color 250ms;
+    transition: color var(--timing-duration) var(--timing-function);
 
     &--current {
         @include font(700, 32px, 39px);
@@ -451,7 +445,7 @@
 
     background-image: url('../images/header/arrow.svg');
 
-    transition: background-image 250ms;
+    transition: background-image var(--timing-duration) var(--timing-function);
 
     &:hover {
         background-image: url('../images/header/arrow_h.svg');
