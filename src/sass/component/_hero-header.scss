@@ -52,6 +52,7 @@
     @media screen and (min-width: 1200px) {
         display: flex;
         position: absolute;
+        z-index: 2;
         top: 40px;
         left: 344px;
     }
@@ -60,11 +61,19 @@
 .menu-list__item {
     font-family: 'Montserrat';
     @include fonts($size: 16px, $weight: 700, $lh: 20px);
-    color: #FCFCFC;
 
     &:not(:last-child) {
             margin-right: 27px;
         }
+}
+
+.menu-list__link {
+    color: #FCFCFC;
+    transition: color 250ms;
+
+    &:hover {
+        color: #F8D24E;
+    }
 }
 
 .icon-menu {
@@ -111,6 +120,10 @@
     height: 37.12px;
     width: 40px;
 
+    background-image: url(../images/header/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
     @media screen and (min-width: 768px) {
         top: 20px;
         left: 35px;
@@ -121,16 +134,18 @@
 
     @media screen and (min-width: 1200px) {
         top: 26px;
-        left: 20px;
+        // left: 20px;
+        height: 59px;
+        width: 55px;
     }
 }
 
-.btn-buy-now {
+.btn-buy-now-pos {
     display: none;
     z-index: 700;
 
     @media screen and (min-width: 768px) {
-        display:block;
+        display: block;
         position: absolute;
         top: 24px;
         right: 33px;
@@ -172,7 +187,7 @@
     }
 }
 
-.btn-buy-now__mobile {
+.btn-buy-now-mobile {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -277,6 +292,9 @@
     position: absolute;
     top: 239px;
 
+    display: flex;
+    align-items: baseline;
+    
     @media screen and (min-width: 768px) {
         top: 198px;
     }
@@ -308,21 +326,10 @@
     }
 }
 
-.hero-link__how-its-made {
+.how-its-made-pos {
     margin-left: 16px;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 8px;
-    line-height: 10px;
-    text-decoration: underline;
-    color: #F8D24E;
 
     @media screen and (min-width: 1200px) {
-        font-family: 'Montserrat';
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 18px;
-        border-radius: 10px;
         margin-left: 32px;
     }
 }
@@ -397,7 +404,41 @@
     }
 }
 
-.hero-arrow {
+.hero-arrow__link {
+    position: absolute;
+    display: none;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 10px;
+
+    background-image: url('../images/header/arrow.svg');
+
+    transition: background-image 250ms;
+
+    &:hover {
+        background-image: url('../images/header/arrow_h.svg');
+    }
+    
+    &:focus {
+        background-image: url('../images/header/arrow_f.svg');
+    }
+    
+    @media screen and (min-width: 768px) {
+        display: block;
+        top: 378px;
+        left: 216px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        top: 557px;
+        left: 257px;
+    }
+}
+
+.hero-arrow__img {
     position: absolute;
     display: none;
 
@@ -440,6 +481,7 @@
 
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 
@@ -456,6 +498,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
 }
 
@@ -488,6 +531,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 
@@ -505,6 +549,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 

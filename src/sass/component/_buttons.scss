@@ -1,40 +1,260 @@
-.button {
+// mobile-tablet-desktop version of Empty Button with border
+// usage class="button-empty"
+// usage class="button-empty--inactive"
+
+.button-empty {
     font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.215;
 
-    display: block;
-    border-radius: 10px;
-    padding: 6px 22px;
-    border: none;
-    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    height: 42px;
-    width: 152px;
-    cursor: pointer;
+    color: #000000;
+    border: 2px solid #F8D24E;
+    background-color: transparent;
 
-    transition: border 250ms var(--timming-fuction),
-        background-color 250ms var(--timming-fuction),
-        box-shadow 250ms var(--timming-fuction);
+    transition: border-color 250ms, color 250ms;
 
-    &:focus,
+    @include font(600, 8px, 9.75px);
+    width: max-content;
+    height: 24px;
+    padding: 0 12px;
+
+    border-radius: 8px;
+   
     &:hover {
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        background-color: #F8D24E;
+        @include font(600, 8px, 9.75px);
+        border-color: #0A8817;
+    }
+
+    &:focus {
+        @include font(600, 8px, 9.75px);
+        border-color: #0A8817;
+        color: #FCFCFC;;
+    }
+
+    &--inactive {
+        font-family: 'Montserrat';
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         color: #000000;
-        border: none ;
+        border: 2px solid #ABABAB;
+        background-color: transparent;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @include font(600, 8px, 9.75px);
+        width: max-content;
+        height: 24px;
+        padding: 0 12px;
+    
+        border-radius: 8px;
+
+        cursor: no-drop;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include font(600, 14px, 18px);
+        width: max-content;
+        height: 42px;
+        padding: 0 34px;
+        border-radius: 10px;
+        
+
+        &:hover {
+            @include font(600, 14px, 18px);
+            border-color: #0A8817;
+        }
+    
+        &:focus {
+            @include font(600, 14px, 18px);
+            border-color: #0A8817;
+            color: #FCFCFC;
+        }
+
+        &--inactive {
+            font-family: 'Montserrat';
+            @include font(600, 14px, 18px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: max-content;
+            height: 42px;
+            padding: 0 34px;
+
+            border-radius: 10px;
+            border: 2px solid #ABABAB;
+
+            color: #000000;
+            cursor: no-drop;
+        }
     }
 }
 
-.btn-primary {
-    color: var(--white-text-color);
-    background-color: #F8D24E;
-    border: none;
+// mobile-tablet-desktop version of Filled Button
+// usage class="button-filled"
+// usage class="button-filled--inactive"
+
+.button-filled {
+    font-family: 'Montserrat';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #000000;
+    background-color:#F8D24E ;
+    border: 2px solid #F8D24E;
+
+    transition: background-color 250ms, border-color 250ms;
+
+    @include font(600, 14px, 18px);
+    height: 42px;
+    padding: 0 34px;
+    border-radius: 10px;
+
+    &:hover {
+        @include font(600, 14px, 18px);
+            background-color:#0A8817;
+            border: 2px solid #0A8817;
+    }
+
+    &:focus {
+        @include font(600, 14px, 18px);
+        background-color:#0A8817;
+        border: 2px solid #0A8817;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+
+        transform: translateY(13%);
+
+        margin-left: 4.82px;
+        
+        width: 13px;
+        height: 13px;
+        background-image: url(../images/components/buttons/btn-arrow-right.svg);
+    }
+
+    &--inactive {
+        font-family: 'Montserrat';
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        color: #000000;
+        background-color: #ABABAB;
+        border: 2px solid #ABABAB;
+    
+        @include font(600, 14px, 18px);
+        height: 42px;
+        padding: 0 34px;
+        border-radius: 10px;
+
+        cursor: no-drop;
+
+        &::after {
+            content: '';
+            display: inline-block;
+    
+            transform: translateY(20%);
+    
+            margin-left: 4.82px;
+    
+            width: 13px;
+            height: 13px;
+            background-image: url(../images/components/buttons/btn-arrow-right.svg);
+        }
+    }
 }
 
-.btn-secondary {
-    color: var(--primary-text-color);
-    background-color: #0A8817;
+// mobile-tablet-desktop version of Underlined Link 
+// usage class="underlined-link"
+// usage class="underlined-link--inactive"
+
+.underlined-link {
+    font-family: 'Montserrat';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: underline;
+    background-color: transparent;
     border: none;
+
+    @include font(600, 8px, 9.75px);
+    width: max-content;
+    height: max-content;
+        
+    color:#F8D24E;
+
+    transition: color 250ms;
+    
+    &:hover {
+        color: #0A8817;
+    }
+
+    &:focus {
+        color: #FCFCFC;
+    }
+
+    &--inactive {
+        font-family: 'Montserrat';
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: underline;
+        background-color: transparent;
+        border: none;
+    
+        @include font(600, 8px, 9.75px);
+        width: max-content;
+        height: max-content;
+    
+        color: #ABABAB;
+        cursor: no-drop;
+    }
+
+    @media screen and (min-width: 1200px) {
+        @include font(600, 14px, 17.07px);
+
+        &:hover {
+            color: #0A8817;
+        }
+
+        &:focus {
+            color: #0A8817;
+        }
+
+        &--inactive {
+            font-family: 'Montserrat';
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: underline;
+            background-color: transparent;
+            border: none;
+        
+            @include font(600, 14px, 17.07px);
+            width: max-content;
+            height: max-content;
+        
+            color: #ABABAB;
+            cursor: no-drop;
+        }
+    }
 }
+

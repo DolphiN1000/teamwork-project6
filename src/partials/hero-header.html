@@ -1,6 +1,7 @@
 <header class="hero-header">
     <div class="container hero-header">
-        <a href="./index.html" class="logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a>
+        <!-- <a href="./index.html" class="logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a> -->
+        <a href="./index.html" class="logo"><span class="logo__img"></a>
         <nav class="nav">
             <ul class="menu-list">
                 <li class="menu-list__item"><a href="#home" class="menu-list__link">Home</a> </li>
@@ -15,20 +16,24 @@
                 <use class="icon-menu" href="./images/symbol-defs.svg#icon-menu"></use>
             </svg>
         </button>
-        <button class="button btn-primary btn-buy-now" type="button" data-modal-open>
-            Buy now >
+        <button class="button-filled btn-buy-now-pos" type="button" data-modal-open>
+            Buy now
         </button>
         <h1 class="key-phrase">ice cream<br> made with<br> <span>passion</span></h1>
         <div class="hero-link">
-            <a href="#products" class="hero-link__products">Products</a>
-            <a href="#how-its-made" class="hero-link__how-its-made">How it's made?</a>
+            <!-- <a href="#products" class="hero-link__products">Products</a> -->
+            <a href="#products" class="button-empty">Products</a>
+            <a href="#how-its-made" class="underlined-link how-its-made-pos">How it's made?</a>
         </div>
         <P class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</P>
-        <svg class="hero-arrow" width="40" height="20">
-            <use href="./images/symbol-defs.svg#hero-arrow"></use>
-        </svg>
+        <a href="" class="hero-arrow__link">
+            <!-- <svg class="hero-arrow__img" width="40" height="20">
+                <use href="./images/symbol-defs.svg#hero-arrow"></use>
+            </svg> -->
+        </a>
+
         <div class="cafe-count">16 <span>cafes</span></div>
-        <div class="food-truck-count">23 <span>food trucs</span></div>
+        <div class="food-truck-count">23 <span>food trucks</span></div>
         <picture>
             <source srcset="./images/header/icecream_desktop.png 1x, ./images/header/icecream_desktop@2x.png 2x" media="(min-width: 1200px)">
             <source srcset="./images/header/icecream_tablet.png 1x, ./images/header/icecream_tablet@2x.png 2x" media="(min-width: 768px)">
@@ -43,7 +48,8 @@
      </div>
     <div class="mobile-menu" data-menu>
         <div class="mobile-menu__container">
-            <a href="./index.html" class="mobile logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a>
+            <!-- <a href="./index.html" class="mobile logo"><img src="./images/header/logo.png" alt="Ice logo" class="logo__img"></a> -->
+            <a href="./index.html" class="logo"><span class="logo__img"></a>
             <ul class="mobile-menu-list">
                 <li class="mobile-menu__item"><a href="#home" class="mobile-menu__link">Home</a> </li>
                 <li class="mobile-menu__item"><a href="#about-us" class="mobile-menu__link">About us</a> </li>
@@ -56,8 +62,8 @@
                     <use href="./images/symbol-defs.svg#btn-close"></use>
                 </svg>
             </button>
-            <button class="button btn-primary btn-buy-now__mobile" type="button" data-modal-open>
-                Buy now   >
+            <button class="button-filled btn-buy-now-mobile" type="button" data-modal-open>
+                Buy now
             </button>            
         </div>
     </div>
