@@ -212,7 +212,7 @@
     background-color: transparent;
     border: none;
     margin: auto;
-    padding-bottom: 20px;
+    cursor: pointer;
 }
 
 
@@ -220,10 +220,14 @@
 .card-icon {
     width: 40px;
     height: 20px;
-    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 250ms var(--timing-function);
+
+    .btn-arrow:hover & {
+        width: 55px;
+    }
 
     .btn-arrow:focus & {
-        width: 60px;
+        width: 80px;
     }
 }
 
