@@ -8,7 +8,7 @@
     position: relative;
     height: 502px;
 
-    overflow: hidden;
+    // overflow: hidden;
     
 
     background-color: #85A279;
@@ -48,6 +48,7 @@
     padding: 0;
     display: none;
     list-style: none;
+    z-index: 700;
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -59,8 +60,7 @@
 }
 
 .menu-list__item {
-    font-family: 'Montserrat';
-    @include fonts($size: 16px, $weight: 700, $lh: 20px);
+
 
     &:not(:last-child) {
             margin-right: 27px;
@@ -68,12 +68,32 @@
 }
 
 .menu-list__link {
+
+    font-family: 'Montserrat';
     color: #FCFCFC;
-    transition: color 250ms;
+    @include font(700, 16px, 20px);
+
+    transition: color var(--timing-duration) var(--timing-function);
+
 
     &:hover {
         color: #F8D24E;
     }
+
+
+}
+
+.menu-list__link {
+    font-family: 'Montserrat';
+        color: #FCFCFC;
+        @include font(700, 16px, 20px);
+
+        transition: color var(--timing-duration) var(--timing-function);
+
+        &:hover {
+            color:#F8D24E ;
+        }
+
 }
 
 .icon-menu {
@@ -115,26 +135,34 @@
 .logo__img {
     position: absolute;
     top: 12px;
-    // left: 32px;
+    left: 0px;
 
     height: 37.12px;
     width: 40px;
 
     background-image: url(../images/header/logo.svg);
-    background-size: contain;
+
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: 479px) {
+        height: 37.12px;
+        width: 40px;
+        top: 12px;
+        left: 20;
+    }
+
 
     @media screen and (min-width: 768px) {
-        top: 20px;
-        left: 35px;
-
         height: 48px;
         width: 44px;
+        top: 20px;
+
     }
 
     @media screen and (min-width: 1200px) {
         top: 26px;
-        // left: 20px;
+
         height: 59px;
         width: 55px;
     }
@@ -145,18 +173,17 @@
     z-index: 700;
 
     @media screen and (min-width: 768px) {
-        display: block;
+        display: inline-block;
         position: absolute;
         top: 24px;
-        right: 33px;
+        right: 0px;
     }
 
     @media screen and (min-width: 1200px) {
         top: 28px;
-        right: 15px;
+        right: 0;
     }
 }
-
 
 .mobile-menu {
     position: fixed;
@@ -204,19 +231,18 @@
     pointer-events: auto;
 }
 
-.mobile-menu__container {
+.mobile-menu-container {
+
     position: relative;
-    padding: 100px 22px 63px 22px;
+
+    padding: 100px 0px 63px 0px;
     height: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
 }
 
 .mobile-menu__close-btn {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 19px;
+    right: 22px;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -237,12 +263,24 @@
 }
 
 .mobile-menu__link {
-    @include fonts($size: 32px, $weight: 700, $lh: 39px);
+    @include font(700, 32px, 39px);
     color: var(--secondary-dark-color);
     text-decoration: none;
 
-    &--сurrent {
-        color: var(--accent-color);
+    transition: color 250ms;
+
+    &--current {
+        @include font(700, 32px, 39px);
+        text-decoration: none;
+        color: #000000;
+    }
+
+    &:hover {
+        color: #000000;
+    }
+
+    &:focus {
+        color: #000000;
     }
 }
 
@@ -260,7 +298,7 @@
     top: 110px;
 
     font-family: 'Seymour One';
-    @include fonts($size: 26px, $weight: 400, $lh: 33px);
+    @include font (400, 26px, 33px);
 
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -268,20 +306,20 @@
     color: #FFFFFF;
 
     & > span {
-        @include fonts($size: 34px, $weight: 400, $lh: 33px);
+        @include font(400, 34px, 33px);
     }
 
     @media screen and (min-width: 768px) {
-        @include fonts($size: 18px, $weight: 400, $lh: 23px);
+        @include font(400, 18px, 23px);
         &>span {
-                @include fonts($size: 16.2531px, $weight: 400, $lh: 13px);
+                @include font(400, 24px, 13px);
             }
     }
 
     @media screen and (min-width: 1200px) {
-        @include fonts($size: 38px, $weight: 400, $lh: 48px);
+        @include font(400, 38px, 48px);
         &>span {
-                @include fonts($size: 38px, $weight: 400, $lh: 48px);
+                @include font(400, 38px, 48px);
             }
     }
 
@@ -340,6 +378,7 @@
     top: 229px;
     width: 276px;
     height: 326px;
+    z-index: 1;
 
     @media screen and (min-width: 768px) {
         left: 365px;
@@ -363,14 +402,12 @@
 
     @media screen and (min-width: 768px) {
         display: block;
-        left: 32px;
         top: 250px;
         width: 152px;
         height: 152px;
     }
 
     @media screen and (min-width: 1200px) {
-        left: 15px;
         top: 378px;
         width: 225px;
         height: 225px;
@@ -391,7 +428,7 @@
         left: 217px;
         width: 175px;
         height: 80px;
-        @include fonts($size: 12px, $weight: 400, $lh: 17px);
+        @include font(400, 12px, 17px);
     }
 
     @media screen and (min-width: 1200px) {
@@ -400,7 +437,7 @@
         left: 258px;
         width: 220px;
         height: 80px;
-        @include fonts($size: 14px, $weight: 400, $lh: 20px);
+        @include font(400, 14px, 20px);
     }
 }
 
@@ -469,15 +506,15 @@
         display: flex;
         flex-direction: column;
         top: 94px;
-        right: 33px;
+        right: 0px;
 
         width: max-content;
         
-        @include fonts($size: 28px, $weight: 900, $lh: 34px);
+        @include font(900, 28px, 34px);
         color: #000000;
 
         & > span {
-            @include fonts($size: 8px, $weight: 400, $lh: 10px);
+            @include font(400, 8px, 10px);
 
             color: #FFFFFF;
             text-transform: lowercase;
@@ -487,14 +524,14 @@
 
     @media screen and (min-width: 1200px) {
         top: 130px;
-        right: 15px;
+        right: 0px;
         // transform: translateX(-100%);
 
-        @include fonts($size: 46px, $weight: 900, $lh: 56px);
+        @include font(900, 46px, 56px);
         color: #131313;
 
         & > span {
-            @include fonts($size: 14px, $weight: 400, $lh: 17px);
+            @include font(400, 14px, 17px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
@@ -518,16 +555,16 @@
         display: flex;
         flex-direction: column;
         top: 162px;
-        right: 33px;
+        right: 0px;
 
         width: max-content;
 
-        @include fonts($size: 28px, $weight: 900, $lh: 34px);
+        @include font(900, 28px, 34px);
         color: #000000;
         text-align: right;
 
         &>span {
-            @include fonts($size: 8px, $weight: 400, $lh: 10px);
+            @include font(400, 8px, 10px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
@@ -537,15 +574,15 @@
 
     @media screen and (min-width: 1200px) {
         top: 223px;
-        right: 15px;
+        right: 0px;
 
         // transform: translateX(-100%);
 
-        @include fonts($size: 46px, $weight: 900, $lh: 56px);
+        @include font(900, 46px, 56px);
         color: #131313;
 
         &>span {
-            @include fonts($size: 14px, $weight: 400, $lh: 17px);
+            @include font(400, 14px, 17px);
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
