@@ -8,7 +8,7 @@
     position: relative;
     height: 502px;
 
-    overflow: hidden;
+    // overflow: hidden;
     
 
     background-color: #85A279;
@@ -103,45 +103,38 @@
     }
 }
 
-.logo {
-    position:absolute;
-    top: 5px;
-
-        @media screen and (min-width: 768px) {
-                top: 10px;
-            }
-        
-            @media screen and (min-width: 1200px) {
-                top: 10px;
-            }
-    
-}
-
 .logo__img {
+
     position: absolute;
-    // top: 12px;
+    top: 12px;
+    left: 0px;
 
     height: 37.12px;
     width: 40px;
 
+    background-image: url(../images/header/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: 479px) {
+        height: 37.12px;
+        width: 40px;
+        top: 12px;
+        left: 20;
+    }
+
     @media screen and (min-width: 768px) {
         height: 48px;
         width: 44px;
+        top: 20px;
+
     }
 
     @media screen and (min-width: 1200px) {
         top: 26px;
-        left: 20px;
         height: 59px;
         width: 55px;
-
     }
-}
-
-.mobile-menu-logo {
-    position: absolute;
-    top:10px;
-    left:20px;
 }
 
 .btn-buy-now-pos {
@@ -152,12 +145,12 @@
         display: inline-block;
         position: absolute;
         top: 24px;
-        right: 33px;
+        right: 0px;
     }
 
     @media screen and (min-width: 1200px) {
         top: 28px;
-        right: 15px;
+        right: 0;
     }
 }
 
@@ -208,11 +201,11 @@
     pointer-events: auto;
 }
 
-.mobile-menu__container {
+.mobile-menu-container {
 
     position: relative;
 
-    padding: 100px 20px 63px 20px;
+    padding: 100px 0px 63px 0px;
     height: 100%;
 }
 
@@ -436,7 +429,7 @@
         display: flex;
         flex-direction: column;
         top: 94px;
-        right: 33px;
+        right: 0px;
 
         width: max-content;
         
@@ -453,7 +446,7 @@
 
     @media screen and (min-width: 1200px) {
         top: 130px;
-        right: 15px;
+        right: 0px;
         // transform: translateX(-100%);
 
         @include font(900, 46px, 56px);
@@ -483,7 +476,7 @@
         display: flex;
         flex-direction: column;
         top: 162px;
-        right: 33px;
+        right: 0px;
 
         width: max-content;
 
@@ -501,7 +494,7 @@
 
     @media screen and (min-width: 1200px) {
         top: 223px;
-        right: 15px;
+        right: 0px;
 
         // transform: translateX(-100%);
 
