@@ -41,6 +41,18 @@
   right: 8px;
   border: none;
   background-color: transparent;
+
+  transition: transform 250ms linear;
+
+  &__icon {
+    transform: scale(1);
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.7);
+    fill: #f8d24e;
+  }
 }
 
 .modal-location-text {
@@ -65,9 +77,16 @@ iframe {
   background-color: var(--current-color);
   border: none;
   border-radius: 10px;
-  padding: 7px 37px;
+  padding: 8px 37px;
   margin: 0 auto;
   @include font(600, 12px, 15px);
+  color: var(--main-dark-color);
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #0a8817;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -119,5 +138,11 @@ iframe {
   .open-map-link {
     @include font(600, 14px, 17px);
     padding: 12px 34px;
+  }
+
+  .open-map-link {
+    max-width: 150px;
+    padding: 12px 34px;
+    @include font(600, 14px, 17px);
   }
 }
