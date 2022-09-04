@@ -13,7 +13,10 @@
     border: 2px solid #F8D24E;
     background-color: transparent;
 
-    transition: border-color 250ms, color 250ms;
+    transition: border-color var(--timing-duration) var(--timing-function),
+                color var(--timing-duration) var(--timing-function);
+
+    
 
     @include font(600, 8px, 9.75px);
     width: max-content;
@@ -112,7 +115,8 @@
     background-color: #F8D24E;
     border: 2px solid #F8D24E;
 
-    transition: background-color 250ms, border-color 250ms;
+    transition: background-color var(--timing-duration) var(--timing-function), 
+                border-color var(--timing-duration) var(--timing-function);
 
     @include font(600, 14px, 18px);
     height: 42px;
@@ -198,7 +202,7 @@
 
     color: #F8D24E;
 
-    transition: color 250ms;
+    transition: color var(--timing-duration) var(--timing-function);
   
     &:hover {
         color: #0A8817;
