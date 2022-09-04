@@ -53,6 +53,7 @@
     @media screen and (min-width: 1200px) {
         display: flex;
         position: absolute;
+        z-index: 2;
         top: 40px;
         left: 344px;
     }
@@ -60,21 +61,25 @@
 
 .menu-list__item {
 
+
     &:not(:last-child) {
             margin-right: 27px;
         }
 }
 
 .menu-list__link {
+
     font-family: 'Montserrat';
     color: #FCFCFC;
     @include font(700, 16px, 20px);
 
     transition: color var(--timing-duration) var(--timing-function);
 
+
     &:hover {
         color: #F8D24E;
     }
+
 
 }
 
@@ -88,6 +93,7 @@
         &:hover {
             color:#F8D24E ;
         }
+
 }
 
 .icon-menu {
@@ -135,6 +141,7 @@
     width: 40px;
 
     background-image: url(../images/header/logo.svg);
+
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -145,6 +152,7 @@
         left: 20;
     }
 
+
     @media screen and (min-width: 768px) {
         height: 48px;
         width: 44px;
@@ -154,6 +162,7 @@
 
     @media screen and (min-width: 1200px) {
         top: 26px;
+
         height: 59px;
         width: 55px;
     }
@@ -432,7 +441,41 @@
     }
 }
 
-.hero-arrow {
+.hero-arrow__link {
+    position: absolute;
+    display: none;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 10px;
+
+    background-image: url('../images/header/arrow.svg');
+
+    transition: background-image 250ms;
+
+    &:hover {
+        background-image: url('../images/header/arrow_h.svg');
+    }
+    
+    &:focus {
+        background-image: url('../images/header/arrow_f.svg');
+    }
+    
+    @media screen and (min-width: 768px) {
+        display: block;
+        top: 378px;
+        left: 216px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        top: 557px;
+        left: 257px;
+    }
+}
+
+.hero-arrow__img {
     position: absolute;
     display: none;
 
@@ -475,6 +518,7 @@
 
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 
@@ -491,6 +535,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
 }
 
@@ -523,6 +568,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 
@@ -540,6 +586,7 @@
             text-align: right;
             color: #FFFFFF;
             text-transform: lowercase;
+            letter-spacing: 0;
         }
     }
 
