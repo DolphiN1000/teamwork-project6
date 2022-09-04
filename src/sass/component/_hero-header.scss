@@ -18,6 +18,9 @@
     background-size: 480px;
     background-position: bottom;
 
+    @media screen and (max-width: 480px) {
+        overflow: hidden;
+    }
     @media screen and (min-width: 768px) {
         height: 415px;
 
