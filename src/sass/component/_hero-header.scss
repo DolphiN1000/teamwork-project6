@@ -48,6 +48,7 @@
     padding: 0;
     display: none;
     list-style: none;
+    z-index: 700;
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -58,12 +59,22 @@
 }
 
 .menu-list__item {
-    font-family: 'Montserrat';
-    color: #FCFCFC;
-    @include font(700, 16px, 20px);
+
 
     &:not(:last-child) {
             margin-right: 27px;
+        }
+}
+
+.menu-list__link {
+    font-family: 'Montserrat';
+        color: #FCFCFC;
+        @include font(700, 16px, 20px);
+
+        transition: color var(--timing-duration) var(--timing-function);
+
+        &:hover {
+            color:#F8D24E ;
         }
 }
 
