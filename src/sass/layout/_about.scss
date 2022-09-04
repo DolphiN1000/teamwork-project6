@@ -44,6 +44,16 @@
     width: 275px;
     border-radius: 50%;
     overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+            width: 330px;
+            height: 330px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 490px;
+            height: 490px;
+        }
 }
 
 .about__subtitle {
