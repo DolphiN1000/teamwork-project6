@@ -588,3 +588,100 @@
 
 }
 
+.product-list--bn-modal {
+    margin-top: 103px;
+    margin-bottom: 40px;
+    gap: 32px;
+
+    @media screen and (max-width: 479px) {
+        margin-top: 83px;
+    }
+}
+
+.product-card--bn-modal {
+    border-radius: 16px;
+
+    width: 132px;
+    height: 135px;
+}
+
+
+.bn-modal__item + .bn-modal__item {
+    @media screen and (max-width: 767px) {
+            margin-top: 83px;
+    }
+}
+
+
+.ice-cream-bn-modal {
+    border: 2px solid #96AF8C;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.ice-coffee-bn-modal {
+    background: #EFD478;
+    border: 2px solid #EFD478;
+    box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.milkshake-bn-modal {
+    border: 2px solid #D6936D;
+    filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+
+.name-ice-cream--bn-modal::before {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -44.334%;
+    left: 0px;
+}
+
+.name-ice-cream--bn-modal::after {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -50%;
+    left: 0px;
+}
+
+.name-ice-coffe--bn-modal::before {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -44.334%;
+    left: 0px;
+}
+
+.name-ice-coffe--bn-modal::after {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -50%;
+    left: 0px;
+}
+
+.name-milkshake--bn-modal::before {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -44.334%;
+    left: 0px;
+}
+
+.name-milkshake--bn-modal::after {
+    content: '';
+    width: 131.6px;
+    height: 130.6px;
+    top: -50%;
+    left: 0px;
+}
+
+.card-name--bn-modal {
+    font-size: 16px;
+    padding-top: 70%;
+}
+
+.form-bn-modal {
+    max-width: 568px;
+}
