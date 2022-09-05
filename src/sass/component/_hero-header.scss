@@ -133,8 +133,8 @@
 
 .logo__img {
     position: absolute;
-    top: 12px;
-    left: 0px;
+    top: 18px;
+    left: 20px;
 
     height: 37.12px;
     width: 40px;
@@ -169,18 +169,18 @@
 
 .btn-buy-now-pos {
     display: none;
-    z-index: 700;
+    z-index: 1113;
 
     @media screen and (min-width: 768px) {
         display: inline-block;
         position: absolute;
         top: 24px;
-        right: 0px;
+        right: 16px;
     }
 
     @media screen and (min-width: 1200px) {
         top: 28px;
-        right: 0;
+        right: 32px;
     }
 }
 
@@ -374,7 +374,7 @@
     top: 229px;
     width: 276px;
     height: 326px;
-    z-index: 1;
+    z-index: 1112;
 
     @media screen and (min-width: 768px) {
         left: 365px;
@@ -588,3 +588,18 @@
 
 }
 
+.header {
+    position: fixed;
+    top: 0;
+    height: 90px;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: 1111;
+    top: 0;
+    background-color: var(--background-color);
+}
+
+.hero-header {
+    margin-top: 90px;
+}
