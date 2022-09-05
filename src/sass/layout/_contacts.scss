@@ -93,6 +93,7 @@
   margin: 0 auto;
   color: var(--main-dark-color);
   transition: fill var(--timing-duration) var(--timing-function);
+  cursor: pointer;
 
   &:hover .contacts-btn__icon,
   &:focus .contacts-btn__icon {
@@ -140,6 +141,7 @@
   .contacts-card {
     display: flex;
     gap: 16px;
+    margin-bottom: 60px;
   }
 
   .contacts-card__item {
@@ -175,7 +177,6 @@
     display: flex;
     justify-content: center;
     gap: 16px;
-    margin-top: 60px;
   }
 
   .contacts-btn {
@@ -206,6 +207,7 @@
 
   .contacts-card {
     gap: 32px;
+    margin-bottom: 64px;
   }
 
   .contacts-card__item {

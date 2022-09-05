@@ -12,3 +12,14 @@
     refs.modal.classList.toggle('is-hidden');
   }
 })();
+
+(function () {
+  var button = document.querySelector('.popup');
+  var iframe = document.querySelector('.modal-iframe');
+
+  button.addEventListener('click', function () {
+    iframe.src = iframe.getAttribute('data-src');
+
+    iframe.classList.toggle('hidden.iframe');
+  });
+})();
