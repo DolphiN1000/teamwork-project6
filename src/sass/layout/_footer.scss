@@ -28,7 +28,7 @@
   transition-duration: var(--timing-function);
   transition-timing-function: var(--timing-duration);
   &:hover {
-    border: 2px var(--background-color);
+    border: 2px solid var(--background-color);
     background-color: var(--current-color);
     fill: var(--main-light-color);
   }
