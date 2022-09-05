@@ -17,7 +17,7 @@
             </svg>
         </button>
 
-        <button class="button-filled btn-buy-now-pos" type="button" data-modal-open>
+        <button class="button-filled btn-buy-now-pos" type="button" data-modal-buy-now-open>
             Buy now
         </button>
         <h1 class="key-phrase">ice cream<br> made with<br> <span>passion</span></h1>
@@ -63,9 +63,68 @@
                     <use href="./images/symbol-defs.svg#btn-close"></use>
                 </svg>
             </button>
-            <button class="button-filled btn-buy-now-mobile" type="button" data-modal-open>
+            <button class="button-filled btn-buy-now-mobile" type="button" data-modal-buy-now-open>
                 Buy now
             </button>            
         </div>
     </div>
+
+    <div class="backdrop is-hidden" data-modal-buy-now>
+        <div class="modal-franchise">
+            <button class="modal-franchise-button" data-modal-buy-now-close>
+                <svg class="modal-franchise-button__icon" width="16" height="16">
+                    <use href="./images/contacts/icon-contacts.svg#close-line"></use>
+                </svg>
+            </button>
+            <p class="modal-franchise-title">
+                Buy now
+            </p>
+            <ul class="products-list list product-list--bn-modal">
+                <li class="ice-crem-one bn-modal__item">
+                    <div class="products-card ice-cream-bn-modal product-card--bn-modal">
+                        <h3 class="card-name name-ice-cream card-name--bn-modal name-ice-cream--bn-modal">ice cream</h3>
+                            <button type="button" class="btn-arrow">
+                        </button>
+                    </div>
+                </li>
+                <li class="ice-crem-two bn-modal__item">
+                    <div class="products-card ice-coffee-bn-modal product-card--bn-modal">
+                        <h3 class="card-name name-ice-coffe card-name--bn-modal name-ice-coffe--bn-modal">ice coffee</h3>
+                        <button type="button" class="btn-arrow">
+                        </button>
+                    </div>
+                </li>
+                <li class="ice-crem-three bn-modal__item">
+                    <div class="products-card milkshake-bn-modal product-card--bn-modal">
+                        <h3 class="card-name name-milkshake card-name--bn-modal name-milkshake--bn-modal">milkshakes</h3>
+                        <button type="button" class="btn-arrow">
+                        </button>
+                    </div>
+                </li>
+            </ul>
+
+            <form class="modal-franchise-form form-bn-modal">
+                <div class="form-franchise-wrapper">
+                    <input id="user_name" class="modal-franchise-input" type="text" required pattern="[a-zA-Zа-яА-Я]+"
+                        minlength="2" />
+                    <label for="user_name" class="modal-franchise-desc">Name</label>
+                </div>
+                <div class="form-franchise-wrapper">
+                    <input id="user_phone" class="modal-franchise-input" type="tel" required
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" />
+                    <label for="user_phone" class="modal-franchise-desc">Phone</label>
+                </div>
+                <!-- <div class="form-franchise-wrapper">
+                    <input id="user_mail" class="modal-franchise-input" type="email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+                    <label for="user_mail" class="modal-franchise-desc">Email</label>
+                </div> -->
+                <label class="modal-franchise-desc-message">
+                    <textarea name="user_coments" class="modal-franchise-message" placeholder="Comment"></textarea>
+                </label>
+                <button type="submit" class="modal-franchise-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </header>
