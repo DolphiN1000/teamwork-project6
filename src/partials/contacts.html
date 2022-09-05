@@ -191,20 +191,40 @@
       </p>
       <form class="modal-franchise-form">
         <div class="form-franchise-wrapper">
-          <input id="name" class="modal-franchise-input" type="text" />
-          <label for="name" class="modal-franchise-desc">Name</label>
+          <input
+            id="user_name"
+            class="modal-franchise-input"
+            type="text"
+            required
+            pattern="[a-zA-Zа-яА-Я]+"
+            minlength="2"
+          />
+          <label for="user_name" class="modal-franchise-desc">Name</label>
         </div>
         <div class="form-franchise-wrapper">
-          <input id="name" class="modal-franchise-input" type="text" />
-          <label for="name" class="modal-franchise-desc">Phone</label>
+          <input
+            id="user_phone"
+            class="modal-franchise-input"
+            type="tel"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            title="xxx-xxx-xx-xx"
+          />
+          <label for="user_phone" class="modal-franchise-desc">Phone</label>
         </div>
         <div class="form-franchise-wrapper">
-          <input id="name" class="modal-franchise-input" type="text" />
-          <label for="name" class="modal-franchise-desc">Email</label>
+          <input
+            id="user_mail"
+            class="modal-franchise-input"
+            type="email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          />
+          <label for="user_mail" class="modal-franchise-desc">Email</label>
         </div>
         <label class="modal-franchise-desc-message">
           <textarea
-            name=""
+            name="user_coments"
             class="modal-franchise-message"
             placeholder="Comment"
           ></textarea>
