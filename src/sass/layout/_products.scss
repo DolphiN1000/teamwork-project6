@@ -1,9 +1,4 @@
 @media screen and (max-width: 767px) {
-    .products {
-        background-image: url(../images-products/bgr-mobil.jpg);
-        background-size: cover;
-        max-width: 480px;
-    }
     
     .name-ice-cream::before {
         content: '';
@@ -142,9 +137,6 @@
 .products {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .products-text {
@@ -232,21 +224,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .products {
-        background-image: url(../images-products/bgr-laptop.jpg);
-        background-size: cover;
-        max-width: 768px;
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi), 
-        screen and (min-resolution: 2dppx) {
-            .products {
-                background-image: url(../images-products/bgr-leptop@2x.jpg)
-            }
-        }
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
     .products-list {
         display: flex;
         align-items: center;
@@ -385,21 +362,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .products {
-        background-image: url(../images-products/bgr-desktop.jpg);
-        background-size: cover;
-        max-width: 1200px;
-        @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi), 
-        screen and (min-resolution: 2dppx) {
-            .products {
-                background-image: url(../images-products/bgr-decktop@2x.jpg)
-            }
-        }
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
     .products-list {
         gap: 32px;
     }
