@@ -22,8 +22,9 @@ function closeMobileMenu() {
 })();
 
 (() => {
+  const newLocal = '[mobile-modal-buy-now-open]';
   const refs = {
-    openModalBtnMobile: document.querySelector('[mobile-modal-buy-now-open]'),
+    openModalBtnMobile: document.querySelector(newLocal),
     modal: document.querySelector('[data-modal-buy-now]'),
     menuMob: document.querySelector('[data-menu]')
   };
