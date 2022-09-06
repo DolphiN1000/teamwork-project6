@@ -22,9 +22,8 @@ function closeMobileMenu() {
 })();
 
 (() => {
-  const newLocal = '[mobile-modal-buy-now-open]';
   const refs = {
-    openModalBtnMobile: document.querySelector(newLocal),
+    openModalBtnMobile: document.getElementById('button-buy-now'),
     modal: document.querySelector('[data-modal-buy-now]'),
     menuMob: document.querySelector('[data-menu]')
   };
@@ -37,3 +36,20 @@ function closeMobileMenu() {
     refs.menuMob.classList.remove('is-open');
   }
 })();
+
+// (() => {
+//   const newLocal = '[mobile-modal-buy-now-open]';
+//   const refs = {
+//     openModalBtnMobile: document.querySelector(newLocal),
+//     modal: document.querySelector('[data-modal-buy-now]'),
+//     menuMob: document.querySelector('[data-menu]')
+//   };
+
+//   refs.openModalBtnMobile.addEventListener('click', openModal);
+
+//   function openModal() {
+//     refs.modal.classList.remove('is-hidden');
+//     refs.modal.classList.add('is-open');
+//     refs.menuMob.classList.remove('is-open');
+//   }
+// })();
