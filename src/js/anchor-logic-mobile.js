@@ -7,7 +7,7 @@ function closeMobileMenu() {
 
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[data-modal-buy-now-open]'),
+    openModalBtn: document.querySelector('[data-modal-bno]'),
     closeModalBtn: document.querySelector('[data-modal-buy-now-close]'),
     modal: document.querySelector('[data-modal-buy-now]'),
   };
