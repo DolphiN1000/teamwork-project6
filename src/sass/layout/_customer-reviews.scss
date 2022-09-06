@@ -1,7 +1,3 @@
-.customer {
-  background-image: url('../images/ice-cream-desktop.jpg');
-}
-
 .customer-container {
   padding-top: 166px;
   padding-bottom: 359px;
@@ -157,54 +153,6 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-lock {
   display: none;
-}
-
-@media screen and (min-resolution: 1dppx),
-  (min-resolution: 96dpi),
-  (min-device-pixel-ratio: 1) {
-  .customer {
-    background-image: url('../images/ice-cream-mobile.jpg');
-  }
-}
-
-@media screen and (min-resolution: 2dppx),
-  (min-resolution: 192dpi),
-  (min-device-pixel-ratio: 2) {
-  .customer {
-    background-image: url('../images/ice-cream-mobile@2x.jpg');
-  }
-}
-
-@media screen and (min-resolution: 1dppx) and (min-width: 768px),
-  screen and (min-resolution: 95dpi) and (min-width: 768px),
-  screen and (min-device-pixel-ratio: 1) and (min-width: 768px) {
-  .customer {
-    background-image: url('../images/ice-cream-tablet.jpg');
-  }
-}
-
-@media screen and (min-resolution: 2dppx) and (min-width: 768px),
-  screen and (min-resolution: 192dpi) and (min-width: 768px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .customer {
-    background-image: url('../images/ice-cream-tablet@2x.jpg');
-  }
-}
-
-@media screen and (min-resolution: 1dppx) and (min-width: 1200px),
-  screen and (min-resolution: 95dpi) and (min-width: 1200px),
-  screen and (min-device-pixel-ratio: 1) and (min-width: 1200px) {
-  .customer {
-    background-image: l url('../images/ice-cream-desktop.jpg');
-  }
-}
-
-@media screen and (min-resolution: 2dppx) and (min-width: 1200px),
-  screen and (min-resolution: 192dpi) and (min-width: 1200px),
-  screen and (min-device-pixel-ratio: 2) and (min-width: 1200px) {
-  .customer {
-    background-image: url('../images/ice-cream-desktop@2x.jpg');
-  }
 }
 
 @media screen and (min-width: 768px) {
