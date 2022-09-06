@@ -97,7 +97,8 @@
   transition: transform var(--timing-duration) var(--timing-function);
 }
 
-.modal-franchise-input:focus + .modal-franchise-desc {
+.modal-franchise-input:focus + .modal-franchise-desc,
+.modal-franchise-input:not(:placeholder-shown) + .modal-franchise-desc {
   transform: translateY(-33px);
 }
 
@@ -208,7 +209,8 @@
     @include font(400, 14px, 20px);
   }
 
-  .modal-franchise-input:focus + .modal-franchise-desc {
+  .modal-franchise-input:focus + .modal-franchise-desc,
+  .modal-franchise-input:not(:placeholder-shown) + .modal-franchise-desc {
     transform: translate(-65px, -50%);
   }
 
