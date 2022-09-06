@@ -111,6 +111,8 @@
     top: 20px;
     right: 20px;
 
+    scale: 1;
+
     height: max-content;
     
     background-color: rgba(0, 0, 0, 0);
@@ -119,7 +121,14 @@
     padding: 0;
     line-height: 0;
 
-    transition: fill var(--timing-duration) var(--timing-function);
+    transition: fill var(--timing-duration) var(--timing-function),
+        scale var(--timing-duration) var(--timing-function),
+        rotate var(--timing-duration) var(--timing-function);
+    
+    &:focus,
+    &:hover {
+        scale: 1.3;
+     }
 
     @media screen and (min-width: 768px) {
         top: 40px;
@@ -252,6 +261,10 @@
     &:hover {
         fill: var(--accent-color);
     }
+
+    @media screen and (min-width: 768px) {
+        top: 32px;
+    }
 }
 
 .mobile-menu__close-icon {
@@ -325,6 +338,7 @@
 .hero-link {
     position: absolute;
     top: 239px;
+    z-index: 2;
 
     display: flex;
     align-items: baseline;
@@ -605,13 +619,11 @@
     height: 135px;
 }
 
-
 .bn-modal__item + .bn-modal__item {
     @media screen and (max-width: 767px) {
             margin-top: 83px;
     }
 }
-
 
 .ice-cream-bn-modal {
     border: 2px solid #96AF8C;
