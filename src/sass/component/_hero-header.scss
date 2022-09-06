@@ -256,10 +256,19 @@
     line-height: 0;
     z-index: 1000;
 
+    color: #ffffff;
+    
     transition: fill var(--timing-duration) var(--timing-function);
 
     &:hover {
         fill: var(--accent-color);
+        color: #000000;
+        cursor: pointer;
+    }
+
+    &:hover > .mobile-menu__close-icon {
+        scale: 1.1;
+        transform: scale(1.2) rotate(270deg);
     }
 
     @media screen and (min-width: 768px) {
@@ -268,7 +277,9 @@
 }
 
 .mobile-menu__close-icon {
-    fill: #212121;
+    fill:currentColor;
+    transform: rotate(270deg);
+    transition: transform var(--timing-duration) var(--timing-function);
 }
 
 .mobile-menu__link {
@@ -276,7 +287,9 @@
     color: var(--secondary-dark-color);
     text-decoration: none;
 
-    transition: color var(--timing-duration) var(--timing-function);
+    transition: color var(--timing-duration) var(--timing-function),
+                transform var(--timing-duration) var(--timing-function),
+                font-size var(--timing-duration) var(--timing-function);
 
     &--current {
         @include font(700, 32px, 39px);
@@ -286,10 +299,15 @@
 
     &:hover {
         color: #000000;
+        // @include font(700, 35px, 39px);
+        font-size: calc(1vw + 2vh);
+        
     }
 
     &:focus {
         color: #000000;
+        // @include font(700, 35px, 39px);
+        font-size: calc(2vw + 2vh);
     }
 }
 
