@@ -84,56 +84,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include font(600, 14px, 18px);
-  background-color: transparent;
-  border-radius: 10px;
-  width: 161px;
-  height: 49px;
-  // padding: 13px 15px;
+  width: 196px;
+  height: 42px;
   margin: 0 auto;
-  color: var(--main-dark-color);
-  transition: fill var(--timing-duration) var(--timing-function);
   cursor: pointer;
-
-  &:hover .contacts-btn__icon,
-  &:focus .contacts-btn__icon {
-    transform: scale(1.5) rotate(270deg);
-  }
-
-  &__icon {
-    margin-top: 2px;
-    margin-left: 6px;
-    fill: currentColor;
-    transition: transform var(--timing-duration) var(--timing-function);
-    transform: scale(1) rotate(0);
-  }
 }
 
 .contacts-btn__location {
-  background-color: var(--current-color);
-  border: none;
-  margin-bottom: 8px;
-  transition: background-color var(--timing-duration) var(--timing-function);
-
-  &:hover,
-  &focus {
-    background-color: #0a8817;
-  }
+  margin-bottom: 16px;
 }
 
 .contacts-btn__franchise {
-  color: var(--main-light-text-color);
+  color: #000000;
   border: 2px solid #f8d24e;
-  color: #fcfcfc;
-  transition: border var(--timing-duration) var(--timing-function);
+  background-color: transparent;
+
+  scale: 1;
+
+  transition: border-color var(--timing-duration) var(--timing-function),
+    color var(--timing-duration) var(--timing-function),
+    scale var(--timing-duration) var(--timing-function);
+
+  @include font(600, 14px, 18px);
+  padding: 0 12px;
+
+  border-radius: 8px;
 
   &:hover,
-  &focus {
-    border: 2px solid #0a8817;
+  &:focus {
+    @include font(600, 14px, 18px);
+    border-color: #0a8817;
+    scale: 1.05;
   }
 
-  &__icon {
-    fill: currentColor;
+  &::after {
+    content: '';
+    display: inline-block;
+
+    transform: translateY(13%) scale(1) rotate(0);
+
+    margin-left: 4.82px;
+
+    width: 13px;
+    height: 13px;
+    background-image: url(../images/components/buttons/btn-arrow-right.svg);
+    background-size: contain;
+
+    transition: transform var(--timing-duration) var(--timing-function);
+  }
+
+  &:hover::after {
+    content: '';
+    scale: 1.05;
+
+    transform: translateY(13%) scale(1.5) rotate(270deg);
+  }
+
+  &:focus::after {
+    content: '';
+    scale: 1.05;
+
+    transform: translateY(13%) scale(1.5) rotate(270deg);
   }
 }
 
@@ -181,16 +192,6 @@
 
   .contacts-btn {
     margin: 0;
-  }
-
-  .contacts-btn__location {
-    width: 192px;
-    height: 42px;
-  }
-
-  .contacts-btn__franchise {
-    width: 158px;
-    height: 42px;
   }
 }
 
