@@ -1,2 +1,0 @@
-function closeMobileMenu(){({menu:document.querySelector("[data-menu]")}).menu.classList.remove("is-open")}!function(){var e={openModalBtn:document.querySelector("[data-modal-buy-now-open]"),closeModalBtn:document.querySelector("[data-modal-buy-now-close]"),modal:document.querySelector("[data-modal-buy-now]")};function o(){e.modal.classList.toggle("is-hidden")}e.openModalBtn.addEventListener("click",o),e.closeModalBtn.addEventListener("click",o)}();
-//# sourceMappingURL=index.b4d32b69.js.map
