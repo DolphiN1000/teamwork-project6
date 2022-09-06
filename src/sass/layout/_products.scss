@@ -21,7 +21,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-cream-mobil@2x.jpg)
+                background-image: url(../images-products/ice-cream-mobil@2x.jpg);
             }
         }
         background-size: cover;
@@ -55,7 +55,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-coffee-mobil@2x.jpg)
+                background-image: url(../images-products/ice-coffee-mobil@2x.jpg);
             }
         } 
         background-size: cover;
@@ -89,7 +89,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/milfshakes-mobil@2x.jpg)
+                background-image: url(../images-products/milfshakes-mobil@2x.jpg);
             }
         }
         background-size: cover;
@@ -252,7 +252,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-cream-leptop@2x.jpg)
+                background-image: url(../images-products/ice-cream-leptop@2x.jpg);
             }
         }
         background-size: cover;
@@ -286,7 +286,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-coffee-leptop@2x.jpg)
+                background-image: url(../images-products/ice-coffee-leptop@2x.jpg);
             }
         }
         background-size: cover;
@@ -320,7 +320,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/milfshakes-leptop@2x.jpg)
+                background-image: url(../images-products/milfshakes-leptop@2x.jpg);
             }
         }
         background-size: cover;
@@ -387,7 +387,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-cream-desktop@2x.jpg)
+                background-image: url(../images-products/ice-cream-desktop@2x.jpg);
             }
         }
         background-size: cover;
@@ -421,7 +421,7 @@
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/ice-coffee-desktop@2x.jpg)
+                background-image: url(../images-products/ice-coffee-desktop@2x.jpg);
             }
         }
         background-size: cover;
@@ -450,13 +450,12 @@
     
     .name-milkshake::after {
         content: '';
-        background-image: url(../images-products/milfshakes-mobil.jpg);
-        background-image: url(../images-products/ice-coffee-desktop.jpg); 
+        background-image: url(../images-products/milfshakes-desktop.jpg);
         @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi), 
         screen and (min-resolution: 2dppx) {
             .products {
-                background-image: url(../images-products/milfshakes-desktop@2x.jpg)
+                background-image: url(../images-products/milfshakes-desktop@2x.jpg);
             }
         }
         background-size: cover;
