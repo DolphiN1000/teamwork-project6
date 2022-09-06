@@ -13,11 +13,12 @@
     border: 2px solid #F8D24E;
     background-color: transparent;
 
+    scale: 1;
+
     transition: border-color var(--timing-duration) var(--timing-function),
-                color var(--timing-duration) var(--timing-function);
-
-    
-
+                color var(--timing-duration) var(--timing-function),
+                scale var(--timing-duration) var(--timing-function);
+  
     @include font(600, 8px, 9.75px);
     width: max-content;
     height: 24px;
@@ -28,13 +29,14 @@
     &:hover {
         @include font(600, 8px, 9.75px);
         border-color: #0A8817;
+        scale: 1.05;
     }
 
     &:focus {
         @include font(600, 8px, 9.75px);
         border-color: #0A8817;
         color: #FCFCFC;
-        ;
+        scale: 1.05;
     }
 
     &--inactive {
@@ -115,8 +117,10 @@
     background-color: #F8D24E;
     border: 2px solid #F8D24E;
 
+    scale: 1;
     transition: background-color var(--timing-duration) var(--timing-function), 
-                border-color var(--timing-duration) var(--timing-function);
+                border-color var(--timing-duration) var(--timing-function),
+                scale var(--timing-duration) var(--timing-function);
 
     @include font(600, 14px, 18px);
     height: 42px;
@@ -127,25 +131,44 @@
         @include font(600, 14px, 18px);
         background-color: #0A8817;
         border: 2px solid #0A8817;
+        scale: 1.05;
     }
 
     &:focus {
         @include font(600, 14px, 18px);
         background-color: #0A8817;
         border: 2px solid #0A8817;
+        scale: 1.05;
     }
 
     &::after {
         content: '';
         display: inline-block;
 
-        transform: translateY(13%);
+        transform: translateY(13%) scale(1) rotate(0);
 
         margin-left: 4.82px;
 
         width: 13px;
         height: 13px;
         background-image: url(../images/components/buttons/btn-arrow-right.svg);
+        background-size: contain;
+
+        transition: transform var(--timing-duration) var(--timing-function);
+    }
+
+    &:hover::after {
+        content: '';
+        scale: 1.05;
+
+        transform: translateY(13%) scale(1.5) rotate(270deg);
+    }
+
+    &:focus::after {
+        content: '';
+        scale: 1.05;
+
+        transform: translateY(13%) scale(1.5) rotate(270deg);
     }
 
     &--inactive {
@@ -202,14 +225,19 @@
 
     color: #F8D24E;
 
-    transition: color var(--timing-duration) var(--timing-function);
-  
+    scale: 1;
+
+    transition: color var(--timing-duration) var(--timing-function),
+        scale var(--timing-duration) var(--timing-function);
+    
     &:hover {
         color: #0A8817;
+        scale: 1.1;
     }
 
     &:focus {
         color: #FCFCFC;
+        scale: 1.1;
     }
 
     &--inactive {

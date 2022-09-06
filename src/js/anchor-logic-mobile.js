@@ -14,8 +14,25 @@ function closeMobileMenu() {
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+  }
+})();
+
+(() => {
+  const refs = {
+    openModalBtnMobile: document.querySelector('[mobile-modal-buy-now-open]'),
+    modal: document.querySelector('[data-modal-buy-now]'),
+    menuMob: document.querySelector('[data-menu]')
+  };
+
+  refs.openModalBtnMobile.addEventListener('click', openModal);
+
+  function openModal() {
+    refs.modal.classList.remove('is-hidden');
+    refs.modal.classList.add('is-open');
+    refs.menuMob.classList.remove('is-open');
   }
 })();

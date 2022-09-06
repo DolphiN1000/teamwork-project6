@@ -111,6 +111,8 @@
     top: 20px;
     right: 20px;
 
+    scale: 1;
+
     height: max-content;
     
     background-color: rgba(0, 0, 0, 0);
@@ -119,7 +121,14 @@
     padding: 0;
     line-height: 0;
 
-    transition: fill var(--timing-duration) var(--timing-function);
+    transition: fill var(--timing-duration) var(--timing-function),
+        scale var(--timing-duration) var(--timing-function),
+        rotate var(--timing-duration) var(--timing-function);
+    
+    &:focus,
+    &:hover {
+        scale: 1.3;
+     }
 
     @media screen and (min-width: 768px) {
         top: 40px;
@@ -247,15 +256,30 @@
     line-height: 0;
     z-index: 1000;
 
+    color: #ffffff;
+    
     transition: fill var(--timing-duration) var(--timing-function);
 
     &:hover {
         fill: var(--accent-color);
+        color: #000000;
+        cursor: pointer;
+    }
+
+    &:hover > .mobile-menu__close-icon {
+        scale: 1.1;
+        transform: scale(1.2) rotate(270deg);
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 32px;
     }
 }
 
 .mobile-menu__close-icon {
-    fill: #212121;
+    fill:currentColor;
+    transform: rotate(270deg);
+    transition: transform var(--timing-duration) var(--timing-function);
 }
 
 .mobile-menu__link {
@@ -263,7 +287,9 @@
     color: var(--secondary-dark-color);
     text-decoration: none;
 
-    transition: color var(--timing-duration) var(--timing-function);
+    transition: color var(--timing-duration) var(--timing-function),
+                transform var(--timing-duration) var(--timing-function),
+                font-size var(--timing-duration) var(--timing-function);
 
     &--current {
         @include font(700, 32px, 39px);
@@ -273,10 +299,15 @@
 
     &:hover {
         color: #000000;
+        // @include font(700, 35px, 39px);
+        font-size: calc(1vw + 2vh);
+        
     }
 
     &:focus {
         color: #000000;
+        // @include font(700, 35px, 39px);
+        font-size: calc(2vw + 2vh);
     }
 }
 
@@ -325,6 +356,7 @@
 .hero-link {
     position: absolute;
     top: 239px;
+    z-index: 2;
 
     display: flex;
     align-items: baseline;
@@ -605,13 +637,11 @@
     height: 135px;
 }
 
-
 .bn-modal__item + .bn-modal__item {
     @media screen and (max-width: 767px) {
             margin-top: 83px;
     }
 }
-
 
 .ice-cream-bn-modal {
     border: 2px solid #96AF8C;
