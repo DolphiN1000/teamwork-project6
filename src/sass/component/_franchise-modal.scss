@@ -87,6 +87,10 @@
   border-radius: 10px;
 }
 
+.modal-franchise-input::placeholder {
+  color: transparent;
+}
+
 .modal-franchise-desc {
   position: absolute;
   top: 50%;
