@@ -149,9 +149,9 @@
 }
 
 @media screen and (min-width: 480px) {
-  .modal-franchise {
-    max-width: 280px;
-  }
+  // .modal-franchise {
+  //   max-width: 280px;
+  // }
 }
 
 @media screen and (min-width: 768px) {
@@ -168,7 +168,7 @@
     transform: translate(-50%, -50%) scale(1);
 
     .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
+      transform: translate(-50%, -50%) scale(0.9);
     }
   }
 
