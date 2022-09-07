@@ -1,5 +1,5 @@
 @media screen and (max-width: 767px) {
-    .modal {
+    .products__modal {
         width: 280px;
     }
 
@@ -16,15 +16,24 @@
     }
 }
 
-.modal {
+.products__modal {
     border: 2px solid #F8D24E;
     border-radius: 10px;
     background-color: #FCFCFC;
     position: absolute;
-    top: 75%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--timing-duration) var(--timing-function);
+    // transform: translate(0%, 0%) scale(1);
+    margin: 0 auto;
     padding: 28px 20px 32px 20px;
+
+    .backdrop__modal.is-hidden & {
+        transform: translate(0%, 0%) scale(1.1);
+        opacity: 0;
+    pointer-events: none;
+      }
 }
 
 .modal-close-btn-icon {
@@ -86,19 +95,28 @@
 .chart {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 14px;
     margin-bottom: 8px;
 }
 
 .chard_container {
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    background-color: #9CBE8F;
-    border: 2px solid #9CBE8F;
+  
+    
     box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    // text-align: center;
+    // padding-top: 5px;
+    color: var(--main-dark-text-color);
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 2.8;
+    background-color: #9cbe8f;
+    border-radius: 50%;
     text-align: center;
-    padding-top: 5px;
+    box-shadow: 0 6px 20px #0a881740;
+    display: flex;
+    /* margin: auto; */
+    align-items: center;
+    justify-content: center;
 }
 
 .chart__component {
@@ -106,12 +124,17 @@
     font-size: 10px;
     line-height: 2.8;
     color: var(--main-dark-text-color);
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #9CBE8F;
+    border: 2px solid #9CBE8F;
 }
 
 .chart-list {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 15px;
 }
 
 .chart-list-container {
@@ -129,10 +152,9 @@
     height: 72px;
     border: 2px solid #9CBE8F;
     border-radius: 40px;
-    padding: 38px 27px;
     position: absolute;
     top: -52px;
-    left: -8px;
+    left: -5px;
 }
 
 .prote::after {
@@ -141,10 +163,9 @@
     height: 72px;
     border: 2px solid #9CBE8F;
     border-radius: 40px;
-    padding: 38px 27px;
     position: absolute;
     top: -52px;
-    left: -8px;
+    left: -5px;
 }
 
 .fats::after {
@@ -153,7 +174,6 @@
     height: 72px;
     border: 2px solid #9CBE8F;
     border-radius: 40px;
-    padding: 38px 27px;
     position: absolute;
     top: -52px;
     left: -8px;
@@ -165,7 +185,6 @@
     height: 72px;
     border: 2px solid #9CBE8F;
     border-radius: 40px;
-    padding: 38px 27px;
     position: absolute;
     top: -52px;
     left: -8px;
@@ -266,10 +285,10 @@ table {
 }
 
 @media screen and (min-width: 768px) {
-    .modal {
+    .products__modal {
         width: 528px;
         height: 995px;
-        top: 50%;
+        // top: 50%;
            
     }
 

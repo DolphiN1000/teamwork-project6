@@ -10,10 +10,14 @@
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: opacity var(--transition-dur-and-funk), visibility var(--transition-dur-and-funk);
+    padding: 94px 12px;
+    
+
+
 
     &.is-hidden {
         opacity: 0;
-        visibility: hidden;
+        // visibility: hidden;
         pointer-events: none;
     }
 }

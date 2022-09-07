@@ -38,8 +38,8 @@
     </ul>
 
     <!-- Modal window -->
-    <div class="backdrop-products is-hidden" data-modal-products>
-        <div class="modal">
+    <div class="backdrop is-hidden" data-modal-products>
+        <div class="modal-franchise">
             <button class="close-btn" type="button" data-modal-products-close>
                 <svg class="modal-close-btn-icon">
                     <use href="./images-products/sprite.svg#close-bth"></use>
@@ -119,21 +119,37 @@
                     <td class="components__column__number">10g</td>
                 </tr>
             </table>
-            <form class="modal-form">
+            <form class="modal-franchise-form">
+                <!-- <div class="form-franchise-wrapper">
                 <label class="modal-form-input" for="name">
                     <span class="modal-form-container">
                         <input type="text" id="name" class="modal-form-name input-field" name="user-name" pattern="[a-zA-Zа-яА-ЯіІїЇ]+" placeholder="Name">
                     </span>
                 </label>
-                <label class="modal-form-input" for="phone">
+            </div> -->
+            <div class="form-franchise-wrapper">
+                <input id="user_name3" class="modal-franchise-input" type="text" required pattern="[a-zA-Zа-яА-Я]+"
+                    minlength="2" placeholder="."/>
+                <label for="user_name3" class="modal-franchise-desc">Name</label>
+            </div>
+                <!-- <label class="modal-form-input" for="phone">
                     <span class="modal-form-container">
                         <input type="tel" id="phone" class="modal-form-tel input-field" name="user-phone" pattern="[0-9{3}-0-9{3}-0-9{2}-0-9{2}" title="xxx-xxx-xx-xx" placeholder="Phone">
                     </span>
-                </label>
-                <label class="modal-form-input" for="note">
+                </label> -->
+                <div class="form-franchise-wrapper">
+                    <input id="user_phone3" class="modal-franchise-input" type="tel" required placeholder="."
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" />
+                    <label for="user_phone3" class="modal-franchise-desc">Phone</label>
+                </div>
+                <!-- <label class="modal-form-input" for="note">
                     <textarea name="user-note" id="note" class="modal-form-note input-field" placeholder="Comment"></textarea>
+                </label> -->
+                <label class="modal-franchise-desc-message">
+                    <textarea name="user_coments" class="modal-franchise-message" placeholder="Comment"></textarea>
                 </label>
-                <button type="submit" class="button-filled modal-form-btn" lang="uk">Submit</button>
+                <button type="submit" class="modal-franchise-btn">Submit</button>
+                <!-- <button type="submit" class="button-filled modal-form-btn" lang="uk">Submit</button> -->
             </form>
         </div>
     </div>
